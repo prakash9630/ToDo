@@ -38,6 +38,7 @@ class ToDoScreen extends ConsumerWidget {
           color: AppColors.white,
         ),
       ),
+      backgroundColor: AppColors.secondaryColor,
       body: tasks!.isNotEmpty
           ? Row(
             children: provider.status.asMap().entries.map((entry) {
@@ -52,7 +53,7 @@ class ToDoScreen extends ConsumerWidget {
                 10.verticalSpace,
                 Text(
                   "ToDo list is empty.",
-                  style: w5f16(),
+                  style: w5f16(AppColors.black),
                 )
               ],
             )),
