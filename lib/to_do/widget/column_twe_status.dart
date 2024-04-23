@@ -48,14 +48,17 @@ class ColumnTwoStatusWidget extends ConsumerWidget {
                       final task = tasks?.where((task) => task.status == status).toList()[index];
                       return LongPressDraggable<Task>(
                         data: task,
-                        feedback: Container(
-                            width: 110,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10)
-                            ),
-                            padding: const EdgeInsets.symmetric(vertical: 15,horizontal: 15),
-                            child: Text(task!.title,style: w4f14(AppColors.black),)),
+                        feedback: Material(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Container(
+                              width: 110,
+                              decoration: BoxDecoration(
+                                  color: AppColors.textGrey,
+                                  borderRadius: BorderRadius.circular(10)
+                              ),
+                              padding: const EdgeInsets.symmetric(vertical: 15,horizontal: 15),
+                              child: Text(task!.title,style: w4f14(AppColors.white),)),
+                        ),
                         childWhenDragging: Container(),
                         child: ToDoTile(task: task,),
                       );

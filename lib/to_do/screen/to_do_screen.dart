@@ -5,7 +5,6 @@ import 'package:todo/const/app_asset.dart';
 import 'package:todo/const/app_colors.dart';
 import 'package:todo/const/app_string.dart';
 import 'package:todo/extension/extension.dart';
-import '../model/task.dart';
 import '../provider/to_do_notifier.dart';
 import '../widget/column_twe_status.dart';
 import '../widget/show_task_add_dialogue.dart';
